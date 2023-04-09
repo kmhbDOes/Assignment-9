@@ -10,9 +10,9 @@ const Header = () => {
           <h1 className="text-2xl md:text-4xl font-bold">RecruitForum</h1>
         </div>
         <div className="flex justify-around gap-x-3 text-2xl">
-          <Link>Statistics</Link>
-          <Link>Applied Jobs</Link>
-          <Link>Blog</Link>
+          <Link to="">Statistics</Link>
+          <Link to="">Applied Jobs</Link>
+          <Link to="/blog">Blog</Link>
         </div>
         <div className="text-3xl">
           <button className="btn-primary">Start Applying</button>
