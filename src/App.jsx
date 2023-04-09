@@ -9,8 +9,8 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <div className="App">
-      <Header />
-      <div className="md:min-h-[calc(100vh-120px)]">
+      <Header className="prim-col"></Header>
+      <div className="md:min-h-100 prim-col">
         <Outlet />
       </div>
       <Footer />
