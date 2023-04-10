@@ -1,5 +1,6 @@
 import React from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
+import CategoryList from "./CategoryList";
 
 const Home = () => {
   const category = useLoaderData();
@@ -35,6 +36,11 @@ const Home = () => {
             ExploreThousands of job opportunities with all the information you
             need, It's your future
           </span>
+          <div>
+            {category.map((clist) => (
+              <CategoryList key={clist.id} clist={clist}></CategoryList>
+            ))}
+          </div>
         </p>
       </div>
     </div>

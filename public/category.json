@@ -1,22 +1,26 @@
 [
   {
-    "image": "https://ibb.co/XZrSHCv",
+    "id": "1",
+    "image": "../public/account.png",
     "title": "Account & Finance",
-    "jobsAvailable": "Design and develop software applications"
+    "jobsAvailable": "300 Jobs Available"
   },
   {
-    "image": "https://ibb.co/qxvDth5",
+    "id": "2",
+    "image": "../public/creative.png",
     "title": "Creative Design",
-    "jobsAvailable": "Analyze and interpret complex data sets"
+    "jobsAvailable": "100+ Jobs Available"
   },
   {
-    "image": "https://ibb.co/dkW7pMp",
+    "id": "3",
+    "image": "../public/social-media.png",
     "title": "Marketing & Sales",
-    "jobsAvailable": "Create user-centered designs for digital products"
+    "jobsAvailable": "150 Jobs Available"
   },
   {
-    "image": "https://ibb.co/tMHGVM6",
+    "id": "4",
+    "image": "../public/chip.png",
     "title": "Engineering Jobs",
-    "jobsAvailable": "Maintain and troubleshoot computer networks"
+    "jobsAvailable": "224 Jobs Available"
   }
 ]
