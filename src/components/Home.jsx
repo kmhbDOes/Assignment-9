@@ -1,6 +1,9 @@
 import React from "react";
+import { useLoaderData } from "react-router-dom";
 
 const Home = () => {
+  const category = useLoaderData();
+  console.log(category);
   return (
     <div className="">
       <div className="flex flex-col md:flex-row justify-around items-center mx-8">
@@ -11,7 +14,7 @@ const Home = () => {
               Dream Job
             </span>
           </p>
-          <p className="text-gray-500 my-64">
+          <p className="text-gray-500 my-6">
             Explore thousands of job opportunities with all the <br />
             information you need. Its your future. Come find it. Manage all
             <br /> your job application from start to finish.
@@ -22,6 +25,7 @@ const Home = () => {
           <img src="../../public/header-banner.png" alt="" />
         </div>
       </div>
+      <div>fet</div>
     </div>
   );
 };
