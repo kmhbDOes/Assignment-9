@@ -14,13 +14,13 @@ const Header = () => {
         </div>
         <div className="hidden md:flex justify-around gap-x-3 text-xl">
           <NavLink
-            to=""
+            to="/statistics"
             className={({ isActive }) => (isActive ? "active" : "default")}
           >
             Statistics
           </NavLink>
           <NavLink
-            to=""
+            to="/appliedjobs"
             className={({ isActive }) => (isActive ? "active" : "default")}
           >
             Applied Jobs

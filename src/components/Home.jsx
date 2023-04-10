@@ -1,15 +1,18 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import CategoryList from "./CategoryList";
+import Joblist from "./Joblist";
 
 const Home = () => {
   const category = useLoaderData();
   console.log(category);
+  const [details, setDetails] = useState([]);
   useEffect(() => {
     fetch("jobInfo.json")
       .then((res) => res.json())
-      .then((data) => console.log(data));
+      .then((data) => setDetails(data.jobs));
   }, []);
+
   return (
     <div className="">
       <div className="flex flex-col md:flex-row justify-around items-center mx-8">
@@ -38,7 +41,7 @@ const Home = () => {
         <p>
           <span className="text-xl md:text-3xl font-bold">
             Job Category List
-          </span>{" "}
+          </span>
           <br />
           <span className="text-xl text-gray-500">
             ExploreThousands of job opportunities with all the information you
@@ -63,7 +66,11 @@ const Home = () => {
 
       {/* Job Listing */}
 
-      <div></div>
+      <div>
+        {details.slice(0, 4).map((job) => (
+          <Joblist key={job.id} job={job}></Joblist>
+        ))}
+      </div>
     </div>
   );
 };
