@@ -58,7 +58,7 @@ const Home = () => {
       {/* Featured Jobs */}
       <div className="bg-white mb-4">
         <p className="text-3xl font-bold py-3">Featured Jobs</p>
-        <p>
+        <p className="my-2">
           Explore Thousands of job opportunities with all teh information you
           need. It's your future.
         </p>
@@ -66,7 +66,7 @@ const Home = () => {
 
       {/* Job Listing */}
 
-      <div>
+      <div className="grid md:grid-cols-2 gap-x-4 gap-y-4 my-4 bg-white ">
         {details.slice(0, 4).map((job) => (
           <Joblist key={job.id} job={job}></Joblist>
         ))}
