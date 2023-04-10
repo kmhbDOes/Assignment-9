@@ -12,3 +12,11 @@
 .btn-outlined {
   @apply font-medium  transition duration-200  shadow-md  md:mb-0  px-4 py-2 md:px-8 md:py-3 m-2 text-lg rounded-full  text-gray-700 bg-purple-500 hover:bg-purple-800;
 }
+
+.active {
+  @apply tracking-wide text-purple-700 transition-colors duration-200;
+}
+
+.default {
+  @apply tracking-wide text-gray-700 transition-colors duration-200 hover:text-gray-600;
+}

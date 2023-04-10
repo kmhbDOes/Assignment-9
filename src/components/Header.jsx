@@ -12,10 +12,25 @@ const Header = () => {
             RecruitForum
           </Link>
         </div>
-        <div className="hidden md:flex justify-around gap-x-3 text-2xl">
-          <Link to="">Statistics</Link>
-          <Link to="">Applied Jobs</Link>
-          <Link to="/blog">Blog</Link>
+        <div className="hidden md:flex justify-around gap-x-3 text-xl">
+          <NavLink
+            to=""
+            className={({ isActive }) => (isActive ? "active" : "default")}
+          >
+            Statistics
+          </NavLink>
+          <NavLink
+            to=""
+            className={({ isActive }) => (isActive ? "active" : "default")}
+          >
+            Applied Jobs
+          </NavLink>
+          <Link
+            to="/blog"
+            className={({ isActive }) => (isActive ? "active" : "default")}
+          >
+            Blog
+          </Link>
         </div>
         <div className="hidden md:inline-block text-3xl">
           <button className="btn-primary">Start Applying</button>
