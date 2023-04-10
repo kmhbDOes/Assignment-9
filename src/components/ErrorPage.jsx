@@ -6,7 +6,7 @@ const ErrorPage = () => {
   return (
     <section className="flex items-center h-screen p-16 bg-gray-100 text-gray-900">
       <div className="container flex flex-col items-center justify-center px-5 mx-auto my-8">
-        <img className="h-32" src="/public/error.png" alt="" />
+        <img className="h-32" src="https://i.ibb.co/BVPKDX0/error.png" alt="" />
         <div className="max-w-md text-center">
           <h2 className="mb-5 font-extrabold text-8xl text-red-600">
             <span className="sr-only">Error</span> {status || 404}
