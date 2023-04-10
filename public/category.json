@@ -1,24 +1,22 @@
-{
-  "category": [
-    {
-      "image": "https://ibb.co/XZrSHCv",
-      "title": "Account & Finance",
-      "jobsAvailable": "Design and develop software applications"
-    },
-    {
-      "image": "https://ibb.co/qxvDth5",
-      "title": "Creative Design",
-      "jobsAvailable": "Analyze and interpret complex data sets"
-    },
-    {
-      "image": "https://ibb.co/dkW7pMp",
-      "title": "Marketing & Sales",
-      "jobsAvailable": "Create user-centered designs for digital products"
-    },
-    {
-      "image": "https://ibb.co/tMHGVM6",
-      "title": "Engineering Jobs",
-      "jobsAvailable": "Maintain and troubleshoot computer networks"
-    }
-  ]
-}
+[
+  {
+    "image": "https://ibb.co/XZrSHCv",
+    "title": "Account & Finance",
+    "jobsAvailable": "Design and develop software applications"
+  },
+  {
+    "image": "https://ibb.co/qxvDth5",
+    "title": "Creative Design",
+    "jobsAvailable": "Analyze and interpret complex data sets"
+  },
+  {
+    "image": "https://ibb.co/dkW7pMp",
+    "title": "Marketing & Sales",
+    "jobsAvailable": "Create user-centered designs for digital products"
+  },
+  {
+    "image": "https://ibb.co/tMHGVM6",
+    "title": "Engineering Jobs",
+    "jobsAvailable": "Maintain and troubleshoot computer networks"
+  }
+]

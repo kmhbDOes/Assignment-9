@@ -13,9 +13,8 @@ const router = createBrowserRouter([
     element: <App />,
     errorElement: <ErrorPage />,
     children: [
-      { path: "/", element: <Home /> },
-      { path: "/blog", element: <Blog /> },
       { path: "/", element: <Home />, loader: () => fetch("category.json") },
+      { path: "/blog", element: <Blog /> },
     ],
   },
 ]);

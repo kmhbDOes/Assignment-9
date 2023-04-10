@@ -25,7 +25,18 @@ const Home = () => {
           <img src="../../public/header-banner.png" alt="" />
         </div>
       </div>
-      <div>fet</div>
+      <div className="py-6 bg-white">
+        <p>
+          <span className="text-xl md:text-3xl font-bold">
+            Job Category List
+          </span>{" "}
+          <br />
+          <span className="text-xl text-gray-500">
+            ExploreThousands of job opportunities with all the information you
+            need, It's your future
+          </span>
+        </p>
+      </div>
     </div>
   );
 };
