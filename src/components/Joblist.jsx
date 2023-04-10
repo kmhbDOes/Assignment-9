@@ -1,4 +1,6 @@
-const Joblist = ({ job }) => {
+import { Link } from "react-router-dom";
+
+const Joblist = ({ id, job }) => {
   const {
     job_title,
     company_logo,
@@ -9,7 +11,7 @@ const Joblist = ({ job }) => {
     location,
   } = job;
   return (
-    <div class="  text-left p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-purple-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 ">
+    <div class="  text-left px-3 py-4 bg-white border border-gray-200 rounded-lg shadow hover:bg-purple-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 ">
       <img src={company_logo} className="h-10 my-4" alt="" />
       <p class="mb-2 text-2xl font-bold tracking-tight text-gray-500 dark:text-white">
         {job_title}
@@ -67,7 +69,9 @@ const Joblist = ({ job }) => {
           {salary}
         </div>
       </div>
-      <button className="btn-primary">View Details</button>
+      <Link to={`/job/:${id}`}>
+        <button className="btn-primary">View Details</button>
+      </Link>
     </div>
   );
 };

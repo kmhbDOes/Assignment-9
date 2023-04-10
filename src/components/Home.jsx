@@ -14,7 +14,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="">
+    <div className="my-6">
       <div className="flex flex-col md:flex-row justify-around items-center mx-8">
         <div className="text-center md:text-left ">
           <p className="text-5xl font-bold my-4">
@@ -71,6 +71,7 @@ const Home = () => {
           <Joblist key={job.id} job={job}></Joblist>
         ))}
       </div>
+      <button className="btn-primary">See All Jobs</button>
     </div>
   );
 };

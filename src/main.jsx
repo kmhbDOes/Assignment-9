@@ -6,8 +6,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./components/Home";
 import Blog from "./components/Blog";
 import ErrorPage from "./components/ErrorPage";
-import Statistics from "./components/Statistics";
 import AppliedJobs from "./components/AppliedJobs";
+import JobDetails from "./components/JobDetails";
+import Statistics from "./components/Statistics";
 
 const router = createBrowserRouter([
   {
@@ -16,9 +17,14 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       { path: "/", element: <Home />, loader: () => fetch("category.json") },
-      { path: "/statistics", element: <Statistics /> },
       { path: "/appliedjobs", element: <AppliedJobs /> },
       { path: "/blog", element: <Blog /> },
+      {
+        path: "/job/:id",
+        element: <JobDetails />,
+        loader: ({ params }) => fetch("/jobInfo.json"),
+      },
+      { path: "/statistics", element: <Statistics /> },
     ],
   },
 ]);
