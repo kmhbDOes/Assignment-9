@@ -5,7 +5,6 @@ import Joblist from "./Joblist";
 
 const Home = () => {
   const category = useLoaderData();
-  console.log(category);
   const [details, setDetails] = useState([]);
   useEffect(() => {
     fetch("jobInfo.json")
@@ -14,7 +13,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="my-6">
+    <div>
       <div className="flex flex-col md:flex-row justify-around items-center mx-8">
         <div className="text-center md:text-left ">
           <p className="text-5xl font-bold my-4">
@@ -68,7 +67,7 @@ const Home = () => {
 
       <div className="grid md:grid-cols-2 gap-x-4 gap-y-4 my-4 bg-white ">
         {details.slice(0, 4).map((job) => (
-          <Joblist key={job.id} job={job}></Joblist>
+          <Joblist key={job.id} id={job.id} job={job}></Joblist>
         ))}
       </div>
       <button className="btn-primary">See All Jobs</button>

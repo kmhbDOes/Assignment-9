@@ -69,7 +69,7 @@ const Joblist = ({ id, job }) => {
           {salary}
         </div>
       </div>
-      <Link to={`/job/:${id}`}>
+      <Link to={`/job/${id}`}>
         <button className="btn-primary">View Details</button>
       </Link>
     </div>
