@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import CategoryList from "./CategoryList";
 
 const Home = () => {
   const category = useLoaderData();
   console.log(category);
+  useEffect(() => {
+    fetch("jobInfo.json")
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+  }, []);
   return (
     <div className="">
       <div className="flex flex-col md:flex-row justify-around items-center mx-8">
@@ -55,6 +60,10 @@ const Home = () => {
           need. It's your future.
         </p>
       </div>
+
+      {/* Job Listing */}
+
+      <div></div>
     </div>
   );
 };
