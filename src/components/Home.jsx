@@ -36,7 +36,7 @@ const Home = () => {
             ExploreThousands of job opportunities with all the information you
             need, It's your future
           </span>
-          <div>
+          <div className="flex justify-center items-center my-8 gap-x-6">
             {category.map((clist) => (
               <CategoryList key={clist.id} clist={clist}></CategoryList>
             ))}
