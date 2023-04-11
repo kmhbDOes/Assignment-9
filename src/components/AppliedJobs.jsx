@@ -17,9 +17,12 @@ const AppliedJobs = () => {
   }
   console.log(jb);
   return (
-    <div className="bg-white absolute">
-      <JObDetailsBanner></JObDetailsBanner>
-      <h2 className="font-bold text-2xl py-4">Applied Jobs</h2>
+    <div className="bg-white  top-32 left-96">
+      <div className="header">
+        <JObDetailsBanner />
+        <h2 className="font-bold text-2xl py-4">Applied Jobs</h2>
+      </div>
+
       {jb.length === 0 ? (
         <p>You haven't applied to any jobs yet.</p>
       ) : (
