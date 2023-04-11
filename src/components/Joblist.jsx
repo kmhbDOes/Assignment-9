@@ -19,10 +19,10 @@ const Joblist = ({ id, job }) => {
       <p class="font-normal text-gray-700 text-xl">{company_name}</p>
       <div className="flex gap-x-4 text-purple-500 font-semibold my-4">
         {/* Job type */}
-        <div className="rounded-lg border-transparent border-2 border-purple-600 text-xl">
+        <div className="rounded-lg  border-2 border-purple-600 text-xl">
           {remote_or_onsite}
         </div>
-        <div className="rounded-xl border-transparent border-2 border-purple-600">
+        <div className="rounded-lg border-2 border-purple-600 text-xl">
           {fulltime_or_parttime}
         </div>
       </div>
