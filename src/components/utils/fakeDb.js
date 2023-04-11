@@ -7,6 +7,9 @@ const addToDb = id => {
         shoppingCart = JSON.parse(storedCart)
     }
 
+
+
+    shoppingCart[id] = id;
     // add quantity
     // const quantity = shoppingCart[id]
     // if (quantity) {
@@ -19,7 +22,7 @@ const addToDb = id => {
 }
 
 const getStoredJob = () => {
-    let shoppingJob = {}
+    let shoppingJob = []
 
     //get the added Job from local storage
     const storedJob = localStorage.getItem('adding-job')
