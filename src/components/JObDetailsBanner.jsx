@@ -4,7 +4,7 @@ const JObDetailsBanner = () => {
   return (
     <div className="relative h-40 md:h-60 lg:h-40 overflow-hidden">
       <img
-        src="https://i.ibb.co/Jk7j3gs/My-project-1.png"
+        src="https://www.freepik.com/free-psd/concept-banner-with-business-women_6187825.htm#query=job%20website%20banner&position=3&from_view=search&track=ais"
         alt="Job Banner"
         className="object-cover w-full h-full"
       />

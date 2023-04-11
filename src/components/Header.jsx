@@ -104,7 +104,7 @@ const Header = () => {
                   <ul className="space-y-4">
                     <li>
                       <Link
-                        to="/shop"
+                        to="/statistics"
                         aria-label="Shop"
                         title="Shop"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -114,8 +114,8 @@ const Header = () => {
                     </li>
                     <li>
                       <Link
-                        to="/cart"
-                        aria-label="Cart"
+                        to="/appliedjobs"
+                        aria-label="Applied Jobs"
                         title="Cart"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >
@@ -125,8 +125,8 @@ const Header = () => {
                     <li>
                       <Link
                         to="/blog"
-                        aria-label="About Us"
-                        title="About Us"
+                        aria-label="Blog"
+                        title="Blog"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >
                         Blog

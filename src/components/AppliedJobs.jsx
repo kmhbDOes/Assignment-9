@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
+import JObDetailsBanner from "./JObDetailsBanner";
 import { getStoredJob } from "./utils/fakeDb";
 
 const AppliedJobs = () => {
@@ -16,7 +17,8 @@ const AppliedJobs = () => {
   }
   console.log(jb);
   return (
-    <div>
+    <div className="bg-white absolute">
+      <JObDetailsBanner></JObDetailsBanner>
       <h2 className="font-bold text-2xl py-4">Applied Jobs</h2>
       {jb.length === 0 ? (
         <p>You haven't applied to any jobs yet.</p>
