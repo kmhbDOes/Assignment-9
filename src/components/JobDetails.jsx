@@ -35,11 +35,10 @@ const JobDetails = () => {
   return (
     <div className="py-4">
       <JObDetailsBanner></JObDetailsBanner>
-
+      <p className="text-4xl font-bold py-4">Job Details</p>
       {/* flex div */}
       <div className="bg-white flex flex-col md:flex-row py-4">
         <div className="bg-white text-center md:text-left">
-          <p className="text-4xl font-bold py-4">Job Details</p>
           <p className="my-2">
             <span className="text-gray-600 font-bold">Job Description:</span>{" "}
             {job_description}
