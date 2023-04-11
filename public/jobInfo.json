@@ -13,10 +13,8 @@
       "job_responsibility": "Design, develop, test, deploy and maintain software solutions.",
       "educational_requirements": "Bachelor's degree in Computer Science or a related field.",
       "experiences": "3+ years of experience in software development.",
-      "contact_information": {
-        "phone": "555-1234",
-        "email": "jobs@acme.com"
-      }
+      "phone": "555-1234",
+      "email": "jobs@acme.com"
     },
     {
       "id": 2,
@@ -31,10 +29,8 @@
       "job_responsibility": "Develop and execute marketing campaigns across multiple channels.",
       "educational_requirements": "Bachelor's degree in Marketing or a related field.",
       "experiences": "5+ years of experience in marketing.",
-      "contact_information": {
-        "phone": "555-5678",
-        "email": "jobs@globex.com"
-      }
+      "phone": "555-5678",
+      "email": "jobs@globex.com"
     },
     {
       "id": 3,
@@ -49,10 +45,8 @@
       "job_responsibility": "Design and produce high-quality graphics for print and digital media.",
       "educational_requirements": "Associate's or Bachelor's degree in Graphic Design or a related field.",
       "experiences": "2+ years of experience in graphic design.",
-      "contact_information": {
-        "phone": "555-9012",
-        "email": "jobs@initech.com"
-      }
+      "phone": "555-9012",
+      "email": "jobs@initech.com"
     },
     {
       "id": 4,
@@ -81,10 +75,8 @@
       "job_responsibility": "Maintain accurate financial records, prepare financial reports, and assist with tax filings.",
       "educational_requirements": "Bachelor's degree in Accounting or a related field.",
       "experiences": "3+ years of experience in accounting.",
-      "contact_information": {
-        "phone": "555-3456",
-        "email": "jobs@abccorp.com"
-      }
+      "phone": "555-3456",
+      "email": "jobs@abccorp.com"
     },
     {
       "id": 6,
@@ -99,10 +91,8 @@
       "job_responsibility": "Identify and pursue new business opportunities, build relationships with clients, and close sales.",
       "educational_requirements": "Bachelor's degree in Business Administration or a related field.",
       "experiences": "2+ years of experience in sales or a related field.",
-      "contact_information": {
-        "phone": "555-7890",
-        "email": "jobs@xyzinc.com"
-      }
+      "phone": "555-7890",
+      "email": "jobs@xyzinc.com"
     }
   ]
 }

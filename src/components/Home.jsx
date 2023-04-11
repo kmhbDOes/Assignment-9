@@ -1,10 +1,17 @@
 import React, { useEffect, useState } from "react";
-import { Link, useLoaderData } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import CategoryList from "./CategoryList";
 import Joblist from "./Joblist";
 
 const Home = () => {
-  const category = useLoaderData();
+  // const category = useLoaderData();
+  // console.log(category);
+  const [categoryDetails, setCategoryDetails] = useState([]);
+  useEffect(() => {
+    fetch("category.json")
+      .then((res) => res.json())
+      .then((data) => setCategoryDetails(data));
+  }, []);
   const [details, setDetails] = useState([]);
   useEffect(() => {
     fetch("jobInfo.json")
@@ -47,7 +54,7 @@ const Home = () => {
             need, It's your future
           </span>
           <div className="flex flex-col md:flex-row justify-center items-center my-8 gap-y-6 md:gap-x-6">
-            {category.map((clist) => (
+            {categoryDetails.map((clist) => (
               <CategoryList key={clist.id} clist={clist}></CategoryList>
             ))}
           </div>

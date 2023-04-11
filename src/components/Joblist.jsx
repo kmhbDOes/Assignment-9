@@ -19,16 +19,16 @@ const Joblist = ({ id, job }) => {
       <p class="font-normal text-gray-700 text-xl">{company_name}</p>
       <div className="flex gap-x-4 text-purple-500 font-semibold my-4">
         {/* Job type */}
-        <div className="rounded-lg border-transparent border-2 border-purple-500 text-xl">
+        <div className="rounded-lg border-transparent border-2 border-purple-600 text-xl">
           {remote_or_onsite}
         </div>
-        <div className="rounded-xl border-transparent border-2 border-purple-500">
+        <div className="rounded-xl border-transparent border-2 border-purple-600">
           {fulltime_or_parttime}
         </div>
       </div>
 
       {/* Job location */}
-      <div className="flex gap-x-6 text-xl">
+      <div className="flex flex-col  md:flex-row gap-y-4 md:gap-x-6 text-xl">
         <div className="flex items-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -49,7 +49,7 @@ const Joblist = ({ id, job }) => {
               d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
             />
           </svg>
-          {location}
+          <div className="text-sm md:text-xl">{location}</div>
         </div>
         <div className="flex items-center">
           <svg
@@ -66,7 +66,7 @@ const Joblist = ({ id, job }) => {
               d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
             />
           </svg>
-          {salary}
+          <div className="text-sm"> {salary}</div>
         </div>
       </div>
       <Link to={`/job/${id}`}>
