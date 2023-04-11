@@ -60,7 +60,9 @@
       "job_description": "We're looking for a friendly and empathetic Customer Support Specialist to help our customers with their questions and issues.",
       "job_responsibility": "Provide excellent customer service via email, phone and chat.",
       "educational_requirements": "High school diploma or equivalent.",
-      "experiences": "1+ year of experience in customer support or a related field"
+      "experiences": "1+ year of experience in customer support or a related field",
+      "phone": "555-9222",
+      "email": "jobs@airbnb.com"
     },
     {
       "id": 5,

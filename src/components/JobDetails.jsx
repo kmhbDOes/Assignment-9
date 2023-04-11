@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import JObDetailsBanner from "./JObDetailsBanner";
+import { addToDb } from "./utils/fakeDb";
 
 const JobDetails = () => {
+  const handleAppliedJobs = (id) => {
+    console.log(id);
+    addToDb(id);
+  };
   const { id } = useParams();
-  console.log(id);
   const [job, setJob] = useState({});
 
   useEffect(() => {
@@ -165,7 +169,12 @@ const JobDetails = () => {
 
               {location}
             </p>
-            <button className="btn-primary w-52">Apply Now</button>
+            <button
+              onClick={() => handleAppliedJobs(id)}
+              className="btn-primary w-52"
+            >
+              Apply Now
+            </button>
           </div>
         </div>
       </div>
