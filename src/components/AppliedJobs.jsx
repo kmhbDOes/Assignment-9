@@ -17,13 +17,13 @@ const AppliedJobs = () => {
   console.log(jb);
   return (
     <div>
-      <h2>Applied Jobs:</h2>
+      <h2 className="font-bold text-2xl py-4">Applied Jobs</h2>
       {jb.length === 0 ? (
         <p>You haven't applied to any jobs yet.</p>
       ) : (
         <ul>
           {jb.map((job) => (
-            <li key={job.id}>
+            <li className="py-4" key={job.id}>
               <h3>{job.title}</h3>
               <p>Company: {job.company_name}</p>
               <p>Location: {job.location}</p>
