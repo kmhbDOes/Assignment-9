@@ -1,40 +1,34 @@
-// use local storage to manage cart data
 const addToDb = id => {
     let shoppingCart = {}
 
     //get the shopping cart from local storage
-    const storedCart = localStorage.getItem('shopping-cart')
+    const storedCart = localStorage.getItem('adding-job')
     if (storedCart) {
         shoppingCart = JSON.parse(storedCart)
     }
 
     // add quantity
-    const quantity = shoppingCart[id]
-    if (quantity) {
-        const newQuantity = quantity + 1
-        shoppingCart[id] = newQuantity
-    } else {
-        shoppingCart[id] = 1
+    // const quantity = shoppingCart[id]
+    // if (quantity) {
+    //     const newQuantity = quantity + 0
+
+    // } else {
+    //     shoppingCart[id] = 1
+    // }
+    localStorage.setItem('adding-job', JSON.stringify(shoppingCart))
+}
+
+const getStoredJob = () => {
+    let shoppingJob = {}
+
+    //get the added Job from local storage
+    const storedJob = localStorage.getItem('adding-job')
+    if (storedJob) {
+        shoppingJob = JSON.parse(storedJob)
     }
-    localStorage.setItem('shopping-cart', JSON.stringify(shoppingCart))
-}
-
-const getStoredCart = () => {
-    let shoppingCart = {}
-
-    //get the shopping cart from local storage
-    const storedCart = localStorage.getItem('shopping-cart')
-    if (storedCart) {
-        shoppingCart = JSON.parse(storedCart)
-    }
-    return shoppingCart
+    return shoppingJob
 }
 
 
 
-
-const deleteShoppingCart = () => {
-    localStorage.removeItem('shopping-cart')
-}
-
-export { addToDb, getStoredCart, deleteShoppingCart }
+export { addToDb, getStoredJob }
