@@ -5,7 +5,6 @@ import { getStoredJob } from "./utils/fakeDb";
 
 const AppliedJobs = () => {
   const jData = useLoaderData();
-  console.log(jData);
   const [filterOption, setFilterOption] = useState("All");
   let jb = [];
   const savedJob = getStoredJob();
@@ -18,7 +17,6 @@ const AppliedJobs = () => {
       jb.push(foundJob);
     }
   }
-  console.log(jb);
 
   return (
     <div className="bg-white top-32 left-96">

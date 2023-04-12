@@ -5,7 +5,6 @@ import { addToDb } from "./utils/fakeDb";
 
 const JobDetails = () => {
   const handleAppliedJobs = (id) => {
-    console.log(id);
     addToDb(id);
   };
   const { id } = useParams();

@@ -85,7 +85,7 @@ const Home = () => {
       </div>
       {!showAllJobs && (
         <button className="btn-primary" onClick={() => setShowAllJobs(true)}>
-          View All
+          View All Jobs
         </button>
       )}
     </div>
