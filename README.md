@@ -7,5 +7,6 @@ Feature of RecruitForum Website
 +You can apply for jobs here
 +After you apply for a job you will find the detsila in applied jobs section
 +There is a chart of assignment number
++Optimized
 +Is mobile responsive
 
