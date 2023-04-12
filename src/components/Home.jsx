@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { useLoaderData } from "react-router-dom";
 import CategoryList from "./CategoryList";
 import Joblist from "./Joblist";
 
 const Home = () => {
-  // const category = useLoaderData();
-  // console.log(category);
+  const [showAllJobs, setShowAllJobs] = useState(false);
+  // const handleSeeAllJobs = () => {
+  //   setJobCount(details.length);
+  // }
   const [categoryDetails, setCategoryDetails] = useState([]);
   useEffect(() => {
     fetch("category.json")
@@ -72,12 +73,21 @@ const Home = () => {
 
       {/* Job Listing */}
 
-      <div className="grid md:grid-cols-2 gap-x-4 gap-y-4 my-4 bg-white ">
+      {/* <div className="grid md:grid-cols-2 gap-x-4 gap-y-4 my-4 bg-white ">
         {details.slice(0, 4).map((job) => (
           <Joblist key={job.id} id={job.id} job={job}></Joblist>
         ))}
+      </div> */}
+      <div className="grid md:grid-cols-2 gap-x-4 gap-y-4 my-4 bg-white ">
+        {details.slice(0, showAllJobs ? details.length : 4).map((job) => (
+          <Joblist key={job.id} id={job.id} job={job}></Joblist>
+        ))}
       </div>
-      <button className="btn-primary">See All Jobs</button>
+      {!showAllJobs && (
+        <button className="btn-primary" onClick={() => setShowAllJobs(true)}>
+          View All
+        </button>
+      )}
     </div>
   );
 };
