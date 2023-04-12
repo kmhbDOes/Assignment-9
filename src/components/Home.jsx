@@ -65,7 +65,7 @@ const Home = () => {
       {/* Featured Jobs */}
       <div className="bg-white mb-4">
         <p className="text-3xl font-bold py-3">Featured Jobs</p>
-        <p className="my-2">
+        <p className="my-2 text-gray-500 text-xl">
           Explore Thousands of job opportunities with all teh information you
           need. It's your future.
         </p>

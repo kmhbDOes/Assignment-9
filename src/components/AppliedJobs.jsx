@@ -6,16 +6,20 @@ import { getStoredJob } from "./utils/fakeDb";
 const AppliedJobs = () => {
   const jData = useLoaderData();
   console.log(jData);
-
+  const [filterOption, setFilterOption] = useState("All");
   let jb = [];
   const savedJob = getStoredJob();
   for (const id in savedJob) {
     const foundJob = jData.jobs.find((j) => parseInt(j.id) === parseInt(id));
-    if (foundJob) {
+    if (
+      foundJob &&
+      (filterOption === "All" || foundJob.remote_or_onsite === filterOption)
+    ) {
       jb.push(foundJob);
     }
   }
   console.log(jb);
+
   return (
     <div className="bg-white top-32 left-96">
       <div className="header">
@@ -23,15 +27,24 @@ const AppliedJobs = () => {
         <h2 className="font-bold text-2xl py-4">Applied Jobs</h2>
       </div>
 
+      {/* Filter buttons */}
       <div className="flex gap-4">
         <h1 className="font-bold text-gray-600">Filter By: </h1>
-        <button className="border-2 border-purple-600 rounded-lg text-purple-600">
+        <button
+          onClick={() => setFilterOption("Remote")}
+          className="border-2 border-purple-600 rounded-lg text-purple-600"
+        >
           Remote
         </button>
-        <button className="border-2 border-purple-600 rounded-lg text-purple-600">
+        <button
+          onClick={() => setFilterOption("Onsite")}
+          className="border-2 border-purple-600 rounded-lg text-purple-600"
+        >
           Onsite
         </button>
       </div>
+
+      {/* Ap[plied Jobs] */}
 
       {jb.length === 0 ? (
         <p>You haven't applied to any jobs yet.</p>
@@ -39,10 +52,10 @@ const AppliedJobs = () => {
         <ul>
           {jb.map((job) => (
             <li
-              className="py-4 border-2 my-2 w-1/2 mx-auto text-left px-4 rounded"
+              className="py-4 border-2 my-2 w-64 md:w-1/2 mx-auto text-left px-4 rounded"
               key={job.id}
             >
-              <div className="flex gap-x-6 my-4 items-center">
+              <div className="flex flex-col md:flex-row gap-x-6 my-4 items-center">
                 <div>
                   <img className="w-40" src={job.company_logo} alt="" />
                 </div>
